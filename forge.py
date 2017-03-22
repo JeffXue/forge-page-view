@@ -12,7 +12,6 @@ def get_proxies():
         header = {'Cookie': '',
                   'User-Agent': ''}
         r = requests.get(url, headers=header)
-        url = 'http://www.chevroletfans.com/website/postlinkjump/?articleid=17608'
         for i in xrange(10):
             ip = r.text.split('<td data-title="IP">')[i+1].split('</td>')[0]
             port = r.text.split('<td data-title="PORT">')[i+1].split('</td>')[0]
